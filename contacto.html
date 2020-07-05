@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/bc2c1d1785.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_eS6huJ7Bi8ZnshNgiDKwQ");
+        })();
+    </script>
 </head>
 
 <body>
@@ -64,7 +70,7 @@
             <div class="alert alert-secondary" role="alert">
                 <h3 class="display-6 text-left my-1">Contáctame</h3>
                 <!--  -->
-                <form onsubmit="validacionGeneral()">
+                <form onsubmit="validacionGeneral(event)">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" class="form-control" id="nombre" placeholder="Nombre / Empresa"
@@ -94,8 +100,8 @@
                     </div>
                     <!--  -->
                     <div class="form-group">
-                        <label for="exampleFormControlFile1">Adjuntar archivo</label>
-                        <input type="file" class="form-control-file" id="">
+                        <label>Adjuntar archivo</label>
+                        <input type="file" class="form-control-file" id="adjunto">
                     </div>
                     <!--  -->
                     <button type="submit" class="btn btn-primary" id="btnEnviar">enviar</button>
